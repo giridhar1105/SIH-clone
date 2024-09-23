@@ -1,3 +1,5 @@
+"use client"
+
 import Headerr from "../headerr/page";
 import Fotter from "../fotter/page";
 

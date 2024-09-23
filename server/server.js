@@ -74,7 +74,7 @@ app.post('/signup', async (req, res) => {
   const { username, email, password, otp } = req.body;
 
   const otpEntry = otpStore[email];
-  if (!otpEntry || otpEntry.otp !== otp || Date.now() - otpEntry.timestamp > 300000) {
+  if (!otpEntry || otpEntry.otp !== otp || Date.now() - otpEntry.timestamp > 30000) {
     return res.status(401).send('Invalid or expired OTP.');
   }
 
@@ -144,5 +144,5 @@ app.post('/api/contact', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:3000`);
 });
