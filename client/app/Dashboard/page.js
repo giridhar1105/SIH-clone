@@ -3,7 +3,7 @@
 import Headerr from "../headerr/page";
 import Fotter from "../fotter/page";
 
-export default function Homep() {
+export default function Dashbord() {
     return (
         <div className="bg-black min-h-screen">
             <Headerr />
